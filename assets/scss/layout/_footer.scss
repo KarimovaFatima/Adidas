@@ -1,0 +1,83 @@
+footer{
+    margin-top: 3%;
+    .footer-main{
+        .container{
+            .footer-main-menus{
+                @include wrap;
+                justify-content: space-evenly;                
+                .footer-main-menu{
+                    h3{
+                        font-size: 22px;
+                        font-weight: 900;
+                        text-transform: uppercase;
+                    }
+                    ul{
+                        li{
+                            margin: 12px 0;
+                            a{
+                                color: $black-color;
+                                font-size: 16px;
+                            }:hover{
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+                .footer-main-social{
+                    h3{
+                        font-size: 22px;
+                        font-weight: 900;
+                        text-transform: uppercase;
+                    }
+                    nav{
+                        display: flex;
+                        flex-direction: column;
+                        a{
+                            margin-top: 15px;
+                            i{
+                                color: $black-color;
+                                font-size: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer-bottom{
+        background-color: #282c31;
+        padding: 30px 0;
+        margin-top: 2%;
+        .container{
+            .footer-bottom-menu{
+                display: flex;
+                justify-content: center;
+                nav{
+                    a{
+                        color: #d3d7da;
+                        font-size: 13px;   
+                    }
+                    span{
+                        color: #d3d7da;
+                        font-size: 20px;
+                        margin: 0 10px;
+                    }
+                    svg{
+                        width: 45px;
+                        height: 45px;
+                        margin-bottom: -3%;
+                    }
+                }
+            }
+            .footer-bottom-text{
+                display: flex;
+                justify-content: center;
+                p{
+                    margin-top: 2%;
+                    color: #d3d7da;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}

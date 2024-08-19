@@ -1,0 +1,17 @@
+@mixin textCenter{
+    display: flex;
+    justify-content: center;
+}
+
+@mixin blackTitle{
+    font-size: 40px;
+    color: $black-color;
+    font-weight: 900;
+}
+
+@mixin wrap{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}

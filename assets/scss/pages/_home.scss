@@ -1,0 +1,371 @@
+main {
+  #intro {
+    position: relative;
+    .intro-background {
+      video {
+        width: 100% !important;
+      }
+    }
+    .container {
+      .intro-page-icons {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 8;
+        margin: 10px;
+        button {
+          background-color: transparent;
+          border-radius: 50px;
+          border: 1px solid $white-color;
+          cursor: pointer;
+        }
+      }
+      .intro-page-content {
+        position: absolute;
+        z-index: 8;
+        bottom: 0;
+        margin-bottom: 50px;
+        h4 {
+          color: $black-color;
+          font-size: 25px;
+          font-weight: 800;
+          background-color: $white-color;
+          width: fit-content;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          padding: 0 4px;
+          margin: 3px 0;
+        }
+        p {
+          color: $black-color;
+          font-size: 15px;
+          font-weight: 300;
+          background-color: $white-color;
+          width: fit-content;
+          letter-spacing: 1px;
+          padding: 3px 4px;
+        }
+        a {
+          appearance: button;
+          background-color: $white-color;
+          border: 1px solid $white-color;
+          box-shadow: transparent 4px 4px 0 0, #000 4px 4px 0 1px;
+          box-sizing: border-box;
+          color: $black-color;
+          cursor: pointer;
+          margin: 15px 0;
+          font-size: 15px;
+          font-weight: 600;
+          letter-spacing: 1px;
+          padding: 12px 40px;
+          text-align: center;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  #still-interested {
+    margin-top: 2%;
+    .still-interested-title {
+      margin-left: 15px;
+      margin-bottom: 20px;
+      h1 {
+        @include blackTitle;
+      }
+      .still-interested-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: space-evenly;
+        // :last-child {
+        //   margin: 0;
+        // }
+        .still-interested-card {
+          width: min-content;
+          // margin-right: 10px;
+          svg {
+            position: absolute;
+            z-index: 2;
+            margin-top: 30px;
+            margin-left: 260px;
+          }
+          .still-interested-card-image {
+            img {
+              height: 378px;
+              position: relative;
+            }
+            :hover {
+              border: 0.3px solid $black-color;
+            }
+          }
+          .still-interested-card-content {
+            display: inline;
+            h3 {
+              font-weight: 300;
+              font-size: 17px;
+            }
+            h5 {
+              font-weight: 400;
+              color: $light-gray-color;
+            }
+          }
+          .still-interested-card-price {
+            position: absolute;
+            margin-top: -35px;
+          }
+        }
+      }
+    }
+  }
+
+  #home-cards {
+    margin-top: 10%;
+    .container {
+      .home-page-cards-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin: 15px 0;
+        .cards-buttons{
+          .black-button {
+            background: $black-color;
+            border: none;
+            padding: 12px;
+            height: 44px;
+            width: max-content;
+            color: $white-color;
+            font-size: 16px;
+            font-weight: 600;
+            margin-right: 5px;
+            cursor: pointer;
+          }
+          .white-button {
+            background: transparent;
+            border: 1px solid $black-color;
+            padding: 12px;
+            height: 44px;
+            width: max-content;
+            color: $black-color;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+          }:hover{
+            background-color: $black-color;
+            color: $white-color;
+          }
+        }
+        .cards-more-btn{
+          a {
+            color: $black-color;
+            font-weight: 300;
+            font-size: 20px;
+            text-decoration: underline;
+          }:hover {
+            background-color: $black-color;
+            color: $white-color;
+            height: min-content;
+          }
+        }
+      }
+      .home-page-cards {
+        @include wrap;
+        .home-page-card {
+          width: fit-content;
+          svg {
+            position: absolute;
+            z-index: 2;
+            margin-top: 20px;
+            margin-left: 180px;
+          }
+          .home-page-card-image {
+            img {
+              height: 278px;
+              position: relative;
+            }
+            :hover {
+              border: 0.3px solid $black-color;
+            }
+          }
+          .home-page-card-content {
+            display: inline;
+            h3 {
+              font-weight: 300;
+              font-size: 17px;
+            }
+            h5 {
+              font-weight: 400;
+              color: $light-gray-color;
+            }
+          }
+          .home-page-card-price {
+            position: absolute;
+            margin-top: -35px;
+          }
+        }
+        .scroll{
+        overflow-x: scroll;
+        width: 100%;
+        margin-top: 40px;
+        }
+      }
+    }
+  }
+
+  #secondary-home-cards{
+    margin-top: 5%;
+    .container{
+      .secondary-home-cards{
+        @include wrap;
+        .secondary-home-card{
+          width: 310px;
+          .secondary-home-card-link{
+            img{
+              width: 310px;
+              height: 415px;
+            }
+          }
+          .secondary-home-card-title{
+            text-transform: uppercase;
+            font-size: 17px;
+            margin: 6px 0;
+          }
+          .secondary-home-card-text{
+            font-weight: 300;
+            margin-bottom: 10%;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+          }
+          .secondary-home-card-shop-link{
+            font-weight: 600;
+            font-size: 16px;
+            letter-spacing: 2px;
+            color: $black-color;
+            text-decoration: underline;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+
+  #popular-items{
+    margin-top: 5%;
+    .container{
+      .popular-items-title{
+        margin-bottom: 3%;
+        h2{
+          letter-spacing: 1px;
+          font-size: 32px;
+          color: $black-color;
+          font-weight: 900;
+        }
+      }
+      .popular-items-link{
+        @include wrap;
+        a{
+          @include blackTitle;
+          border-bottom: 1px solid $black-color;
+          width: 30%;
+          line-height: 64px;
+          margin-bottom: 3%;
+        }:hover{
+          border-bottom: 6px solid $black-color;
+        }
+      }
+    }
+  }
+
+  #home-categories{
+    margin-top: 10%;
+    .container{
+      .home-categories-menus{
+        @include wrap;
+        .home-categories-menu{
+          h3{
+            font-size: 19px;
+            font-weight: 900;
+            cursor: pointer;
+          }
+          ul{
+            li{
+              margin: 14px 0;
+              a{
+                color: $black-color;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #info-about-adidas {
+    margin-top: 12%;
+    padding: 90px 0;
+    background-color: $black-color;
+    .container {
+      .about-adidas-content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        h1 {
+          color: $white-color;
+          text-transform: uppercase;
+          font-size: 29px;
+          font-weight: 800;
+          letter-spacing: 1px;
+          margin: 20px 0;
+          width: 53%;
+        }
+        p {
+          color: $white-color;
+          word-spacing: 3px;
+          font-weight: 500;
+          line-height: 24px;
+          font-size: 17px;
+          width: 53%;
+          text-align: justify;
+        }
+        svg{
+          margin-top: 5%;
+        }
+      }
+    }
+  }
+
+  #adiclub-registration{
+    background-color: #ede734;
+    padding: 40px 0;
+    .container{
+      .adiclub-join{
+        display: flex;
+        justify-content: center;
+        h1{
+          @include blackTitle;
+        }
+          button{
+          appearance: button;
+          background-color: $black-color;
+          border: 1px solid $black-color;
+          box-shadow: #ede734 4px 4px 0 0, $black-color 4px 4px 0 1px;
+          box-sizing: border-box;
+          color: $white-color;
+          cursor: pointer;
+          font-size: 16px;
+          font-weight: 600;
+          letter-spacing: 3px;
+          padding: 12px 25px;
+          text-align: center;
+          text-transform: uppercase;
+          margin-left: 20px;
+           i{
+            margin-left: 10px;
+            font-size: 20px;
+           }
+        }
+
+      }
+    }
+  }
+}
